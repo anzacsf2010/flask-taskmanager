@@ -1,0 +1,18 @@
+{%  extends 'base.html' %}
+
+{%  block head %}
+    <title>Task Manager Web App</title>
+{% endblock %}
+
+{%  block body %}
+    <h2 style="font-weight: bold">Task Updater</h2>
+    <div>
+        <form action="/update/{{ task.id }}" method="post">
+            <label for="content"></label><input type="text" name="content" value="{{ task.content }}" id="content"/>
+            <input type="submit" value="Update Task" class="btn btn-primary">
+        </form>
+    </div>
+    <footer>
+        This task manager is built using Python + Flask with a SQLite database for data fetching.
+    </footer>
+{% endblock %}
